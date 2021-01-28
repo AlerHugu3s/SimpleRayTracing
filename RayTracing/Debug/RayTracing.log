@@ -1,0 +1,9 @@
+﻿  Film.cpp
+  Sample.cpp
+  Sampler.cpp
+  Scene.cpp
+C:\Users\xiasm\Desktop\OPENGL\hw3\RayTracing\RayTracing\RayTracing\Scene.cpp(17,15): warning C4101: “raytracer”: 未引用的局部变量
+C:\Users\xiasm\Desktop\OPENGL\hw3\RayTracing\RayTracing\RayTracing\Scene.cpp(16,12): warning C4101: “camera”: 未引用的局部变量
+  test.cpp
+  正在生成代码...
+  RayTracing.vcxproj -> C:\Users\xiasm\Desktop\OPENGL\hw3\RayTracing\RayTracing\Debug\RayTracing.exe

@@ -1,0 +1,3 @@
+﻿  Scene.cpp
+C:\Users\xiasm\Desktop\OPENGL\hw3\RayTracing\RayTracing\RayTracing\Scene.cpp(27,68): warning C4305: “参数”: 从“double”到“float”截断
+  RayTracing.vcxproj -> C:\Users\xiasm\Desktop\OPENGL\hw3\RayTracing\RayTracing\x64\Debug\RayTracing.exe
