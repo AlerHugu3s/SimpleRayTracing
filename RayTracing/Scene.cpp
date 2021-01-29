@@ -5,7 +5,7 @@ int screenWitdh, screenHeight;
 glm::vec3 interval_X, interval_Y;
 glm::vec3 UL, UR, LR, LL;
 Light* lights[2];
-Sphere* sphere[3];
+Sphere* sphere[5];
 Scene::Scene(int x, int y)
 {
     screenWitdh = x;
@@ -18,17 +18,24 @@ void Scene::render()
     Sample sample = Sample(0, 0);
     Film film;
     Camera camera = Camera(glm::vec3(0,0,0));
-    sphere[0] = new Sphere(0.5f, glm::vec3(0.7f, 0.7f, -2), glm::vec3(1,0,1), glm::vec3(1,1,1),100.0f);
-    sphere[1] = new Sphere(0.5f, glm::vec3(-1, -1, -3), glm::vec3(1, 1, 0), glm::vec3(1, 1, 1), 100.0f);
-    sphere[2] = new Sphere(3, glm::vec3(0, 0, -8), glm::vec3(0.5, 0.5, 0.5), glm::vec3(1, 1, 1), 100.0f);
+    sphere[0] = new Sphere(2, glm::vec3(0, 0, -17), glm::vec3(1,0,0), glm::vec3(1,1,1),50.0f);
+    sphere[1] = new Sphere(1.5f, glm::vec3(0, 4, -18.5), glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), 50.0f);
+    sphere[2] = new Sphere(1.5f, glm::vec3(0, -4, -16.5), glm::vec3(0, 0, 1), glm::vec3(1, 1, 1), 50.0f);
+    sphere[3] = new Sphere(1.5f, glm::vec3(4, 0, -18.5), glm::vec3(1, 0, 1), glm::vec3(1, 1, 1), 50.0f);
+    sphere[4] = new Sphere(1.5f, glm::vec3(-4, 0, -16.5), glm::vec3(0, 1, 1), glm::vec3(1, 1, 1), 50.0f);
     Raytracer raytracer = Raytracer();
     Color color = Color(0, 0, 0, 0);
     Ray ray = Ray();
-    lights[0] = new DirectionalLight(0.3, glm::vec3(0.5f, 0.5f, 1));
-    lights[1] = new PointLight(0.5, glm::vec3(1, -2, -4));
+    lights[0] = new DirectionalLight(1, glm::vec3(-0.57735027f,0.57735027f,0.57735027f));
+    lights[1] = new DirectionalLight(1,glm::vec3(0.57735027f, -0.57735027f, -0.57735027f));
     while (sampler.getSample(&sample)) {
         camera.GenerateRay(sample, &ray);
         //std::cout << "StartTracing:  " << sample.x << "  " << sample.y << "\n";
+        if (sample.x == 726 && sample.y == 517)
+        {
+            int f = 0;
+        }
+
         raytracer.trace(ray, 1,&color);
         film.commit(sample, color);
     }

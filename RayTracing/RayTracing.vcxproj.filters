@@ -13,84 +13,114 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\Lights">
+      <UniqueIdentifier>{cd6e381c-a2af-4219-ab71-351fd81846ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Lights">
+      <UniqueIdentifier>{c1d88453-5a45-4798-9e31-471b9ccff46c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Basic">
+      <UniqueIdentifier>{ab2843b3-0e50-48fd-9a25-84c9618550d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Basic">
+      <UniqueIdentifier>{c5632034-3565-4ab1-9b26-258784f0f01e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Tools">
+      <UniqueIdentifier>{9196f41b-d4e4-4752-b6a0-7d6ec006b75e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Tools">
+      <UniqueIdentifier>{c4272dbb-8aaf-443c-8be0-1aedb607b770}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Geometries">
+      <UniqueIdentifier>{37f50b92-3bbc-49d7-ab9a-ebbf8b20cba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Geometries">
+      <UniqueIdentifier>{0c02eb85-155c-4d3b-a3ab-96477a7cb770}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Camera.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Color.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Film.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Raytracer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Sample.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Sampler.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Sphere.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Ray.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="Light.cpp">
+      <Filter>源文件\Lights</Filter>
     </ClCompile>
     <ClCompile Include="DirectionalLight.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\Lights</Filter>
     </ClCompile>
     <ClCompile Include="PointLight.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\Lights</Filter>
     </ClCompile>
-    <ClCompile Include="Light.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="Color.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample.cpp">
+      <Filter>源文件\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Film.cpp">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Raytracer.cpp">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Sampler.cpp">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>源文件\Geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>源文件\Geometries</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Color.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Film.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Raytracer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Sample.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Sampler.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Sphere.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Ray.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectionalLight.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="Light.h">
+      <Filter>头文件\Lights</Filter>
     </ClInclude>
     <ClInclude Include="PointLight.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\Lights</Filter>
     </ClInclude>
-    <ClInclude Include="Light.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>头文件\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>头文件\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample.h">
+      <Filter>头文件\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>头文件\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Film.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Raytracer.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Sampler.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>头文件\Geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>头文件\Geometries</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
