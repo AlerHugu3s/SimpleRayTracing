@@ -4,6 +4,9 @@
 
 glm::vec3 Raytracer::trace(Ray& ray, int depth, Color* color)
 {
+    if (depth == 1) {
+        color->SetRGBA(0,0,0, 0);
+    }
     if (depth > 5) {
         return glm::vec3(0, 0, 0);
     }
@@ -40,12 +43,8 @@ glm::vec3 Raytracer::trace(Ray& ray, int depth, Color* color)
 
             glm::vec3 N = glm::normalize(result - (*sphere[i]).center);
             glm::vec3 eyeDir = glm::normalize(eyePos - result);
-
-            glm::vec3 R = result - 2*glm::dot(result,N)*N;
-
-            Ray reflectRay = Ray(result, R);
-
             result += N * 0.01f;
+
             tempPoint[i] = result;
 
             for (int j = 0; j < 2; j++)
@@ -95,16 +94,12 @@ glm::vec3 Raytracer::trace(Ray& ray, int depth, Color* color)
         return glm::vec3(0, 0, 0);
        
     glm::vec3 reflectN = glm::normalize(tempPoint[index] - (*sphere[index]).center);
-    glm::vec3 reflectVector = tempPoint[index] - 2 * glm::dot(tempPoint[index], reflectN) * reflectN;
-    Ray reflectRay = Ray(tempPoint[index], reflectVector);
-    glm::vec3 lightVec = trace(reflectRay, depth + 1, color);
+    glm::vec3 reflectVector = ray.dir - 2 * glm::dot(ray.dir, reflectN) * reflectN;
+    Ray reflectRay = Ray(tempPoint[index], tempPoint[index]+reflectVector);
+    glm::vec3 lightVec = trace(reflectRay, depth + 1, color)*(1.0f / (1.0f + ray.t * 0.1f + ray.t * ray.t * 0.01f)) + tempColor[index];
 
-    if (depth != 1) {
-        lightVec = (lightVec + tempColor[index]) * (1.0f / (1.0f + ray.t * 0 + ray.t * ray.t * 0));
-    }
-    else
+     if (depth == 1)
     {
-        lightVec = lightVec + tempColor[index];
         color->SetRGBA(lightVec.x, lightVec.y, lightVec.z, 0);
     }
 

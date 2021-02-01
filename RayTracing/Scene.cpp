@@ -19,10 +19,10 @@ void Scene::render()
     Film film;
     Camera camera = Camera(glm::vec3(0,0,0));
     sphere[0] = new Sphere(2, glm::vec3(0, 0, -17), glm::vec3(1,0,0), glm::vec3(1,1,1),50.0f);
-    sphere[1] = new Sphere(1.5f, glm::vec3(0, 4, -18.5), glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), 50.0f);
-    sphere[2] = new Sphere(1.5f, glm::vec3(0, -4, -16.5), glm::vec3(0, 0, 1), glm::vec3(1, 1, 1), 50.0f);
-    sphere[3] = new Sphere(1.5f, glm::vec3(4, 0, -18.5), glm::vec3(1, 0, 1), glm::vec3(1, 1, 1), 50.0f);
-    sphere[4] = new Sphere(1.5f, glm::vec3(-4, 0, -16.5), glm::vec3(0, 1, 1), glm::vec3(1, 1, 1), 50.0f);
+    sphere[1] = new Sphere(1.5f, glm::vec3(0, 4, -17), glm::vec3(0, 1, 0), glm::vec3(1, 1, 1), 50.0f);
+    sphere[2] = new Sphere(1.5f, glm::vec3(0, -4, -17), glm::vec3(0, 0, 1), glm::vec3(1, 1, 1), 50.0f);
+    sphere[3] = new Sphere(1.5f, glm::vec3(4, 0, -17), glm::vec3(1, 0, 1), glm::vec3(1, 1, 1), 50.0f);
+    sphere[4] = new Sphere(1.5f, glm::vec3(-4, 0, -17), glm::vec3(0, 1, 1), glm::vec3(1, 1, 1), 50.0f);
     Raytracer raytracer = Raytracer();
     Color color = Color(0, 0, 0, 0);
     Ray ray = Ray();
@@ -31,7 +31,7 @@ void Scene::render()
     while (sampler.getSample(&sample)) {
         camera.GenerateRay(sample, &ray);
         //std::cout << "StartTracing:  " << sample.x << "  " << sample.y << "\n";
-        if (sample.x == 726 && sample.y == 517)
+        if (sample.x == 718 && sample.y == 508)
         {
             int f = 0;
         }
